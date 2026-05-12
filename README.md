@@ -7,8 +7,7 @@
 [![Tests](https://img.shields.io/badge/tests-14%20passing-brightgreen.svg)](tests/)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B.svg)](https://your-app-url.streamlit.app)
 
-**Live demo:** *[deploy your Streamlit app and paste the URL here]*
-
+**🚀 Live demo:** [q-learning-gridworld.streamlit.app]([https://q-learning-gridworld.streamlit.app](https://q-learning-gridworld-g2o8bb4dxnvrex9rbaf4kn.streamlit.app/)
 ---
 
 ## Results at a glance
