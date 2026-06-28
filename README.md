@@ -179,8 +179,10 @@ MIT, see [LICENSE](LICENSE).
 
 ## About
 
-Built by Mohammed Salman Khan.
+Built by Mohammed Salman Khan, MSc Artificial Intelligence at Ulster University.
 
 Email: mohammedsalmankhans636@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/mohammedsalmankhans/
+
 GitHub: https://github.com/mohammedsalmankhan
