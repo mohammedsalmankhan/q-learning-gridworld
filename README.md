@@ -1,3 +1,58 @@
+# Q-Learning Grid World
+
+A tabular Q-learning agent that learns to navigate a 5x5 grid with obstacles and a teleport shortcut, benchmarked against the analytical Bellman optimum and compared against SARSA.
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-14%20passing-brightgreen.svg)](tests/)
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B.svg)](https://q-learning-gridworld-g2o8bb4dxnvrex9rbaf4kn.streamlit.app/)
+
+Live demo: [q-learning-gridworld-g2o8bb4dxnvrex9rbaf4kn.streamlit.app](https://q-learning-gridworld-g2o8bb4dxnvrex9rbaf4kn.streamlit.app/)
+
+---
+
+## Results at a glance
+
+| Metric | Value |
+|---|---|
+| Episodes to converge | 60 |
+| Optimal path length | 6 steps |
+| Total reward (greedy rollout) | +11 |
+| Path | (2,1) -> (2,2) -> (2,3) -> (2,4) -> (4,4) -> (5,4) -> (5,5) |
+| Learned V(s) at jump cell | 13.07 (matches Bellman optimum) |
+
+The agent finds the teleport shortcut at (2,4) -> (4,4) without any hand-crafted prior, simply because the +5 jump reward outweighs the longer detour once the discount factor is taken into account.
+
+![Learning curve](docs/plots/learning_curve.png)
+
+---
+
+## What this project demonstrates
+
+- Reinforcement learning fundamentals: tabular Q-learning, SARSA, epsilon-greedy exploration with multiplicative decay, TD error, off-policy vs on-policy bootstrapping
+- Software engineering: modular package structure, type hints, dataclasses, unit tests with pytest, CLI argument parsing, reproducible RNG seeding
+- Empirical rigour: hyperparameter sweep across alpha in {0.1, 0.3, 0.5, 0.7, 1.0} with three seeds each, results averaged
+- Theoretical grounding: analytical Bellman value iteration computed as a ground-truth baseline, compared cell by cell against the learned V(s)
+- Visualisation: state-value heatmaps, greedy policy arrows, learning curves, algorithm comparisons
+
+This started as coursework for an MSc module on intelligent systems, then I rebuilt it to a production-quality standard for my portfolio: proper tests, a CLI, reproducible seeding, and an interactive demo instead of a one-off notebook.
+
+---
+
+## Tech stack
+
+| Layer | Tools |
+|---|---|
+| Language | Python 3.10+ |
+| Numerical | NumPy |
+| Visualisation | Matplotlib |
+| UI | Streamlit |
+| Testing | pytest |
+| Quality | Type hints, dataclasses |
+
+---
+
+## Project structure
 ## Quick start
 
 ### 1. Clone and install
