@@ -1,5 +1,3 @@
----
-
 ## Quick start
 
 ### 1. Clone and install
